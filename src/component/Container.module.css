@@ -1,0 +1,27 @@
+:root {
+    --container-border: 1px #929292 solid;
+    --main-background: #f8f8f8 ;
+}
+
+section > div {
+    height: 200px;
+    margin: 0 auto;
+    border: var(--container-border);
+    border-radius: 5px;
+    background: var(--main-background);
+    color: #0c0c0c;
+    padding: 1rem;
+}
+
+.half-container-size {
+    max-width: 40%;
+}
+
+.default-container-size {
+    max-width: 80%;
+}
+
+.full-container-size {
+    max-width: 100%;
+}
+
