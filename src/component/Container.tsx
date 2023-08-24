@@ -1,29 +1,39 @@
 import { ReactNode } from "react";
 
-import classes from "./Container.module.css";
+import classes from "./Container.module.scss";
 
 interface Props {
   children: ReactNode;
-  size: "default-size" | "full-size" | "half-size"; // Specify the allowed size values
+  textPosition?: "middle" | "end";
+  size?: "full-size" | "small-size"; // Specify the allowed size values
 }
 
-export default function DefaultContainer({ children, size }: Props) {
-  const containerClassName = (() => {
+export default function Container({ children, textPosition, size }: Props) {
+  const containerSizeName = (() => {
     switch (size) {
-      case "default-size":
-        return classes["default-container-size"];
       case "full-size":
         return classes["full-container-size"];
-      case "half-size":
+      case "small-size":
         return classes["half-container-size"];
       default:
-        return "";
+        return classes["default-container-size"];
+    }
+  })();
+
+  const textPositionName = (() => {
+    switch (textPosition) {
+      case "middle":
+        return classes["text-position-middle"];
+      case "end":
+        return classes["text-position-end"];
     }
   })();
 
   return (
     <section>
-      <div className={containerClassName}>{children}</div>
+      <div className={`${containerSizeName}`}>
+        <div className={`${textPositionName}`}>{children}</div>
+      </div>
     </section>
   );
 }
