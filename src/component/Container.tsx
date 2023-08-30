@@ -1,14 +1,20 @@
 import { ReactNode } from "react";
 
-import classes from "./Container.module.scss";
+import classes from "./style/Container.module.scss";
 
 interface Props {
   children: ReactNode;
-  textPosition?: "middle" | "end";
+  textPosition?: "middle" | "end"; // Specify the textpostition, DEFAULT position of text is left
   size?: "full-size" | "small-size"; // Specify the allowed size values
+  borderlineStyle?: "none";
 }
 
-export default function Container({ children, textPosition, size }: Props) {
+export default function Container({
+  children,
+  textPosition,
+  size,
+  borderlineStyle,
+}: Props) {
   const containerSizeName = (() => {
     switch (size) {
       case "full-size":
@@ -29,9 +35,17 @@ export default function Container({ children, textPosition, size }: Props) {
     }
   })();
 
+  const borderLineStyle = (() => {
+    if (borderlineStyle === "none") {
+      return classes["container-no-line"];
+    } else {
+      return classes["borderline-style"];
+    }
+  })();
+
   return (
     <section>
-      <div className={`${containerSizeName}`}>
+      <div className={`${containerSizeName} ${borderLineStyle}`}>
         <div className={`${textPositionName}`}>{children}</div>
       </div>
     </section>
