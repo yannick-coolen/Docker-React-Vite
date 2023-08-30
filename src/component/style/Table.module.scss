@@ -1,0 +1,20 @@
+@import '../../styling/config';
+
+.borderStyle {
+    border: $container-border;
+    border-radius: 5px;
+}
+
+.text-position {
+    &-start {
+        margin-left: 16px;
+    }
+
+    &-middle {
+      text-align: center;
+    }
+  
+    &-end {
+      text-align: right;
+    }
+  }
