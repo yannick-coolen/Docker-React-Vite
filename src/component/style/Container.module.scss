@@ -1,0 +1,47 @@
+@import "../../styling/config";
+
+section > div {
+  margin: 1rem auto;
+  // background: $main-background;
+  color: $primary-dark-color;
+  padding: 1rem;
+}
+
+.borderline-style {
+  border: $container-border;
+  border-radius: 5px;
+}
+
+.container-no-line {
+  border: none;
+}
+
+.half-container-size {
+  max-width: 40%;
+}
+
+.full-container-size {
+  max-width: 100%;
+}
+
+.text-position {
+  &-middle {
+    text-align: center;
+  }
+
+  &-end {
+    text-align: right;
+  }
+}
+
+@media (min-width: 300px) {
+  .default-container-size {
+    max-width: 100%;
+  }
+}
+
+@media (min-width: 768px) {
+  .default-container-size {
+    max-width: 80%;
+  }
+}
