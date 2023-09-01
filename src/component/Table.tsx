@@ -65,11 +65,19 @@ export function Table({
 }
 
 export function Head({ children }: TableHeadProps) {
-  return <thead>{children}</thead>;
+  return (
+    <thead>
+      <tr>{children}</tr>
+    </thead>
+  );
 }
 
 export function Body({ children }: TableBodyProps) {
-  return <tbody>{children}</tbody>;
+  return (
+    <tbody>
+      <tr>{children}</tr>
+    </tbody>
+  );
 }
 
 export function TableHeadCell({
@@ -103,6 +111,7 @@ export function TableBodyCell({
       className={bordered ? classes.borderStyle : ""}
       colSpan={colSpan}
       rowSpan={rowSpan}
+      style={{ padding: "0 2rem 0 0" }}
     >
       {children}
     </td>

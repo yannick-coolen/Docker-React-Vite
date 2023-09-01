@@ -44,10 +44,15 @@ export default function Container({
   })();
 
   return (
-    <section>
-      <div className={`${containerSizeName} ${borderLineStyle}`}>
+    <>
+      <div
+        className={`
+          ${containerSizeName} 
+          ${borderLineStyle} 
+          ${classes["container-box"]}`}
+      >
         <div className={`${textPositionName}`}>{children}</div>
       </div>
-    </section>
+    </>
   );
 }

@@ -1,25 +1,30 @@
 import { NavLink } from "react-router-dom";
+import { v4 as uuid } from "uuid";
 
 import classes from "./style/Nav.module.scss";
+import { useEffect, useState } from "react";
 
-const NAVIGATOR: {
-  id: string;
+interface Navigator {
   name: string;
   link: string;
-}[] = [
-  { id: "1", name: "Home", link: "/" },
-  { id: "2", name: "About", link: "/about" },
-  { id: "3", name: "Contact", link: "/contact" },
-];
+}
 
 export default function Nav() {
+  const [navigators, setNavigators] = useState<Navigator[]>([]);
+
+  useEffect(() => {
+    fetch("src/navbar.link.json")
+      .then((response) => response.json())
+      .then((data) => setNavigators(data));
+  }, []);
+  
   return (
     <nav>
       <div className={classes.navigator}>
-        <div>My App</div>
+        <h1>My App</h1>
         <ul className={classes["nav-menu"]}>
-          {NAVIGATOR.map((data) => (
-            <li key={data.id}>
+          {navigators.map((data) => (
+            <li key={uuid()}>
               <NavLink to={data.link}>{data.name}</NavLink>
             </li>
           ))}
