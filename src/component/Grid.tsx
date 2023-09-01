@@ -3,7 +3,6 @@ import { ReactNode } from "react";
 import classes from "./style/Grid.module.scss";
 
 interface GridProps {
-
   children: ReactNode;
   width?: "small" | "default";
   background?: boolean;
@@ -27,10 +26,9 @@ export function Grid({
   return (
     <section>
       <div
-        className={`
-      ${classes[`grid-container-${containerSize}`]} 
-      ${background ? `${classes.background}` : ""}
-      ${bordered ? `${classes["border-line"]}` : ""}`}
+        className={`${classes[`grid-container-${containerSize}`]} ${
+          background ? `${classes.background}` : ""
+        } ${bordered ? `${classes["border-line"]}` : ""}`}
       >
         {children}
       </div>

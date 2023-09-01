@@ -46,10 +46,7 @@ export default function Container({
   return (
     <>
       <div
-        className={`
-          ${containerSizeName} 
-          ${borderLineStyle} 
-          ${classes["container-box"]}`}
+        className={`${containerSizeName} ${borderLineStyle} ${classes["container-box"]}`}
       >
         <div className={`${textPositionName}`}>{children}</div>
       </div>

@@ -54,9 +54,9 @@ export function Table({
 }: TableProps) {
   return (
     <table
-      className={`
-    ${bordered ? classes.borderStyle : ""} 
-    ${textPositionName(textPosition ?? "")}}`}
+      className={`${bordered ? classes.borderStyle : ""} ${textPositionName(
+        textPosition ?? ""
+      )}}`}
       style={{ padding: `${whitespace}rem` }}
     >
       {children}
@@ -89,9 +89,9 @@ export function TableHeadCell({
 }: TableHeaderCellProps) {
   return (
     <th
-      className={`
-        ${bordered ? classes.borderStyle : ""} 
-        ${textPositionName(textPosition ?? "")}}`}
+      className={`${bordered ? classes.borderStyle : ""} ${textPositionName(
+        textPosition ?? ""
+      )}}`}
       colSpan={colSpan}
       rowSpan={rowSpan}
     >
