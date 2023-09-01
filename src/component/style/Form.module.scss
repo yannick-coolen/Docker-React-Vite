@@ -1,0 +1,77 @@
+@import "../../styling/config";
+
+@mixin border-style {
+  border-radius: 5px;
+  border: $container-border;
+}
+
+@mixin flex-container {
+  display: flex;
+  flex-direction: column;
+}
+
+@mixin input-style {
+  background: white;
+  border: $container-border;
+  color: black;
+  border-radius: 5px;
+  padding: 0.3rem;
+
+  &:focus {
+    border: solid 1px rgb(112, 112, 194);
+  }
+}
+
+.form {
+  &-borderstyle {
+    &-default {
+      @include border-style;
+      background: $form-background-default;
+    }
+    &-dark {
+      @include border-style;
+      background: $from-background-dark;
+    }
+  }
+  &-header {
+    &-underline {
+      background: $underline-default;
+      border: $underline;
+      height: 0.5px;
+      width: 100%;
+      border-radius: 2px;
+    }
+  }
+  &-section {
+    padding: 1rem;
+    & > label {
+      border: 1px solid;
+    }
+  }
+  &-input {
+    &-container {
+      @include flex-container();
+    }
+    &-content {
+      @include flex-container();
+        & > label {
+          margin-bottom: .2rem
+        }
+    }
+    &-width {
+      &-small {
+        @include input-style();
+        max-width: 25%;
+      }
+      &-default {
+        @include input-style();
+        max-width: 55%;
+        min-width: 55%;
+      }
+      &-large {
+        @include input-style();
+        max-width: 100%;
+      }
+    }
+  }
+}

@@ -1,14 +1,12 @@
 @import "../../styling/config";
 
-section > div {
+.container-box {
   margin: 1rem auto;
-  // background: $main-background;
   color: $primary-dark-color;
-  padding: 1rem;
+  padding: 1rem 0;
 }
 
 .borderline-style {
-  border: $container-border;
   border-radius: 5px;
 }
 
@@ -16,11 +14,17 @@ section > div {
   border: none;
 }
 
+.default-container-size {
+  box-shadow: $box-shadow-bottom;
+}
+
 .half-container-size {
+  box-shadow: $box-shadow-bottom;
   max-width: 40%;
 }
 
 .full-container-size {
+  box-shadow: $box-shadow-bottom;
   max-width: 100%;
 }
 
@@ -28,7 +32,6 @@ section > div {
   &-middle {
     text-align: center;
   }
-
   &-end {
     text-align: right;
   }
