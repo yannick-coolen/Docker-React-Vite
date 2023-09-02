@@ -1,5 +1,9 @@
-name: Package json
-on: [push, workflow_dispatch]
+name: build
+on:
+  push:
+    branches:
+      - dev
+  workflow_dispatch:
 jobs:
   lint:
     runs-on: ubuntu-latest
