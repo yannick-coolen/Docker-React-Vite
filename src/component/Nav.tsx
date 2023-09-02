@@ -13,11 +13,16 @@ export default function Nav() {
   const [navigators, setNavigators] = useState<Navigator[]>([]);
 
   useEffect(() => {
-    fetch("src/navbar.link.json")
-      .then((response) => response.json())
-      .then((data) => setNavigators(data));
+    const fetchData = async () => {
+      try {
+        const response = await fetch("src/navbar.link.json");
+        const data = await response.json();
+        setNavigators(data.links);
+      } catch (error) {}
+    };
+    fetchData();
   }, []);
-  
+
   return (
     <nav>
       <div className={classes.navigator}>
