@@ -1,0 +1,38 @@
+@import "../../styling/config";
+
+@mixin button-style {
+  padding: 0.8rem 1rem;
+  background: $primary-button-background-color;
+  border: none;
+  border-radius: 5px;
+  margin-bottom: 8px;
+  cursor: pointer;
+  &:hover {
+    background-color: $primary-button-background-color-hover
+  }
+}
+
+.button {
+  &-width {
+    &-small {
+      @include button-style();
+      max-width: 5%;
+    }
+    &-default {
+      @include button-style();
+      min-width: 10%;
+    }
+    &-large {
+      @include button-style();
+      min-width: 25%;
+    }
+    &-xlarge {
+      @include button-style();
+      min-width: 50%;
+    }
+    &-full {
+      @include button-style();
+      min-width: 100%;
+    }
+  }
+}
