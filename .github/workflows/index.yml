@@ -1,5 +1,5 @@
 name: Package json
-on: workflow_dispatch
+on: [push, workflow_dispatch]
 jobs:
   lint:
     runs-on: ubuntu-latest
