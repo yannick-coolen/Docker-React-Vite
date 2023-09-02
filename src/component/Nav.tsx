@@ -18,7 +18,9 @@ export default function Nav() {
         const response = await fetch("src/navbar.link.json");
         const data = await response.json();
         setNavigators(data.links);
-      } catch (error) {}
+      } catch (error) {
+        console.log(error)
+      }
     };
     fetchData();
   }, []);
