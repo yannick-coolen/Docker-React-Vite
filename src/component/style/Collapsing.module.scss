@@ -1,0 +1,27 @@
+@import "../../styling/config";
+
+.border {
+  &-edge-line {
+    &-top-only {
+      border-top: $container-border;
+      padding: 1rem;
+    }
+    &-right-only {
+      border-right: $container-border;
+      padding: 1rem;
+    }
+    &-bottom-only {
+      border-bottom: $container-border;
+      padding: 1rem;
+    }
+    &-left-only {
+      border-left: $container-border;
+      padding: 1rem;
+    }
+    &-default {
+      border: $container-border;
+      border-radius: 5px;
+      padding: 1rem;
+    }
+  }
+}
