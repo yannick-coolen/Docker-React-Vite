@@ -1,6 +1,6 @@
 // Component
-import Container from "../component/Container";
-import { Grid } from "../component/Grid";
+import Container from "../components/Container";
+import { Grid } from "../components/Grid";
 
 import classes from "./NotFound.module.scss";
 
