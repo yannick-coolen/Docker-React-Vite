@@ -1,0 +1,16 @@
+.avatar {
+  height: 200px;
+  width: 200px;
+  border-radius: 50%;
+  box-shadow: 0px 5px 4px 0px rgba(0, 0, 0, 0.497);
+}
+.social-links {
+  display: grid;
+  grid-template-areas: 'linked github mail';
+  width: 40px;
+  list-style-type: none;
+
+  li {
+    max-width: 50px;
+  }
+}
