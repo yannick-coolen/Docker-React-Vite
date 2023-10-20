@@ -44,7 +44,7 @@ export default function Repositories() {
     const fetchData = async () => {
       if (ghConfig?.username && ghConfig?.PAT) {
         const { username, PAT } = ghConfig;
-        const url = `https://api.github.com/users/${username}/repos `;
+        const url = `https://api.github.com/users/${username}/repos`;
 
         const headers = {
           Authorization: `token ${PAT}`,
