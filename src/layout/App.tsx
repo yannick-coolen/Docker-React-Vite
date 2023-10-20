@@ -1,7 +1,7 @@
-import { Outlet } from "react-router-dom";
+import { Outlet } from 'react-router-dom';
 
 // Components
-import Nav from "../component/Nav";
+import Nav from '../components/Nav';
 
 export default function App() {
   return (
@@ -11,7 +11,7 @@ export default function App() {
       </header>
       <main>
         <article>
-          <div style={{ marginTop: "2rem" }}>
+          <div style={{ marginTop: '2rem' }}>
             <Outlet />
           </div>
         </article>
