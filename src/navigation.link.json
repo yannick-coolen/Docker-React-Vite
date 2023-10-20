@@ -1,0 +1,28 @@
+{
+  "links": [
+    { "name": "Home", "link": "/" },
+    { "name": "Repositories", "link": "/repositories"},
+    { "name": "Contact", "link": "/contact" }
+  ],
+  "socialLinks": [
+    {
+      "link": "https://www.linkedin.com/in/yannick-coolen-062271149/",
+      "img": "../../../assets/svg/linkedin-icon.svg",
+      "alt": "linkedin"
+    },
+    {
+      "link": "https://github.com/yannick-coolen",
+      "img": "../../../assets/svg/github-mark.svg",
+      "alt": "github"
+    },
+    {
+      "link": "mailto:yannick-coolen-1991@hotmail.nl",
+      "img": "../../../assets/svg/mail-icon.svg",
+      "alt": "email"
+    }
+  ],
+  "gh-repo" : {
+    "username": "yannick-coolen",
+    "PAT": "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"
+  }
+}
