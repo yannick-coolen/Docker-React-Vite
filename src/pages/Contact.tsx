@@ -1,6 +1,6 @@
-import Container from "../component/Container";
-import { Form } from "../component/Form";
-import { Grid } from "../component/Grid";
+import Container from "../components/Container";
+import { Form } from "../components/Form";
+import { Grid } from "../components/Grid";
 
 export default function Contact() {
   return (

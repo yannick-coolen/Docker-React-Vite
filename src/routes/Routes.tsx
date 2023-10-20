@@ -5,8 +5,8 @@ import { Navigate, RouteObject } from "react-router";
 import App from "../layout/App";
 import Home from "../pages/Home";
 import Contact from "../pages/Contact";
-import About from "../pages/About";
 import NotFound from "../pages/NotFound";
+import Repositories from "../pages/Repositories";
 
 export const routes: RouteObject[] = [
   {
@@ -14,8 +14,8 @@ export const routes: RouteObject[] = [
     element: <App />,
     children: [
       { path: "", element: <Home /> },
-      { path: "about", element: <About /> },
       { path: "contact", element: <Contact /> },
+      { path: "repositories", element: <Repositories /> },
       { path: "not-found", element: <NotFound /> },
       { path: "*", element: <Navigate replace to={"/not-found"} /> },
     ],

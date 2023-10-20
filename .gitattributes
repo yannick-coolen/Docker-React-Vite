@@ -1,0 +1,2 @@
+.\src\pages\Playground.tsx merge=ours
+.github\workflows\build.yml merge=ours

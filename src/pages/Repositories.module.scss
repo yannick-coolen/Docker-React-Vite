@@ -1,0 +1,15 @@
+@import '../styling/config';
+
+.repo-text {
+  &:last-of-type {
+    margin-bottom: 2rem;
+  }
+}
+
+.repo-link {
+  background: $primary-button-background-color;
+  color: $primary-bright-color;
+  padding: 0.5rem;
+  margin-top: 8rem;
+  border-radius: 5px;
+}

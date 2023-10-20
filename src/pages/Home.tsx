@@ -1,9 +1,13 @@
-import Container from "../component/Container";
-import { Grid } from "../component/Grid";
+import Container from '../components/Container';
+import { Grid } from '../components/Grid';
+import Avatar from '../components/UI/Avatar';
 
 export default function Home() {
   return (
     <Container>
+      <Grid>
+        <Avatar />
+      </Grid>
       <Grid>
         <Grid.Element bordered background>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus nihil
@@ -12,7 +16,7 @@ export default function Home() {
           culpa quas?
         </Grid.Element>
       </Grid>
-      <Grid width="small">
+      <Grid width='small'>
         <Grid.Element bordered background>
           test
         </Grid.Element>
