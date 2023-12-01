@@ -1,6 +1,7 @@
-import Container from '../components/Container';
-import { Grid } from '../components/Grid';
+import Container from '../components/UI/Container';
+import { Grid } from '../components/UI/Grid';
 import Avatar from '../components/UI/Avatar';
+import Projects from './Projects';
 
 export default function Home() {
   return (
@@ -18,7 +19,7 @@ export default function Home() {
       </Grid>
       <Grid width='small'>
         <Grid.Element bordered background>
-          test
+          <Projects />
         </Grid.Element>
         <Grid.Element bordered background>
           test
