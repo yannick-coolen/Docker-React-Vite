@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { v4 as uuid } from 'uuid';
-import avatar from '../../../assets/image/avatar.png';
+import avatar from '../../../../assets/image/avatar.png';
 
 import classes from '../style/Avatar.module.scss';
 

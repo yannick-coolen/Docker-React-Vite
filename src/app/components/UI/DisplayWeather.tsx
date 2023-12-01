@@ -1,7 +1,7 @@
 import axios from 'axios';
 import { useEffect, useState } from 'react';
 
-import classes from './style/DisplayWeather.module.scss';
+import classes from '../style/DisplayWeather.module.scss';
 
 interface Weather {
   timezone: string;
@@ -35,9 +35,16 @@ export default function DisplayWeather() {
   }, [fetched]);
 
   return (
-    <p className={classes.weather}>
+    <>
+    {
+      weather ? (
+      <p className={classes.weather}>Weather in region: {' '}
       {weather?.timezone.split('/')[1]}: {weather?.current_weather.temperature}{' '}
       {weather?.current_weather_units.temperature}
-    </p>
+    </p>) : (
+      <p className={classes.weather}>Weather offline</p>
+    )
+    }
+    </>
   );
 }
