@@ -1,4 +1,4 @@
-@import '../styling/config';
+@import '../../styling/config';
 
 .repo-text {
   &:last-of-type {
@@ -12,4 +12,13 @@
   padding: 0.5rem;
   margin-top: 8rem;
   border-radius: 5px;
+  text-decoration: none;
+
+  &:hover {
+    background: $primary-button-background-color-hover;
+  }
+}
+
+.loading {
+  padding: 1rem;
 }
