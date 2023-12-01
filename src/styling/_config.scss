@@ -7,9 +7,13 @@ $border-color: #bdbdbd;
 $container-border: 1px $border-color solid;
 $container-background: #d8e1ff;
 $main-background: #eef9fe;
+
+// font color
 $primary-bright-color: #f0f8ff;
 $primary-dark-color: #1f2667;
+
 $primary-font: 'Libre Franklin', sans-serif;
+// link
 $primary-link-color: #6232b6;
 $primary-button-background-color: #0000ff;
 $primary-button-background-color-hover: #1b60ce;
@@ -20,3 +24,18 @@ $underline: 1px $underline-default solid;
 
 $form-background-default: #eef9fe;
 $from-background-dark: #324287;
+
+// mixin
+@mixin button-style {
+  padding: 0.8rem 1rem;
+  background: $primary-button-background-color;
+  border: none;
+  border-radius: 5px;
+  margin-bottom: 8px;
+  cursor: pointer;
+  color: $primary-bright-color;
+  text-decoration: none;
+  &:hover {
+    background-color: $primary-button-background-color-hover;
+  }
+}
