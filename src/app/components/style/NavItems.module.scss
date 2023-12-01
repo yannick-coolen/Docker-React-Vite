@@ -1,0 +1,18 @@
+@import '../../../styling/config';
+
+.font {
+  &-dark {
+    color: $primary-dark-color;
+  }
+
+  &-bright {
+    color: $primary-bright-color;
+  }
+}
+
+.backgroundColor {
+  text-decoration: none;
+  &:hover {
+    cursor: pointer;
+  }
+}

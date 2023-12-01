@@ -1,0 +1,15 @@
+@import '../../../styling/config';
+
+.navbutton {
+  &-small {
+    @include button-style();
+    max-width: 5%;
+  }
+  &-default {
+    @include button-style();
+    max-width: 10%;
+  }
+  &-large {
+    padding: 25%;
+  }
+}

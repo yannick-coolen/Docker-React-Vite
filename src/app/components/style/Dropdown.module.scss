@@ -1,0 +1,19 @@
+@import '../../../styling/config';
+
+.dropdown {
+  display: flex;
+  flex-direction: column;
+  justify-items: end;
+  list-style-type: none;
+  width: 20rem;
+  border: #bfbdca solid 1px;
+  background: #f2f0fb;
+  position: fixed;
+  right: 0;
+  color: black;
+}
+
+.dropdown-list {
+  list-style: none;
+  text-decoration: none;
+}

@@ -1,16 +1,4 @@
-@import "../../styling/config";
-
-@mixin button-style {
-  padding: 0.8rem 1rem;
-  background: $primary-button-background-color;
-  border: none;
-  border-radius: 5px;
-  margin-bottom: 8px;
-  cursor: pointer;
-  &:hover {
-    background-color: $primary-button-background-color-hover
-  }
-}
+@import '../../styling/config';
 
 .button {
   &-width {

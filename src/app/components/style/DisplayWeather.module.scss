@@ -1,0 +1,13 @@
+@media screen and (min-width: 300px) {
+    .weather {
+        display: none;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .weather {
+        display: flex;
+        justify-content: flex-end;
+        color: rgb(0, 0, 0);
+    }
+}
